@@ -1,4 +1,6 @@
 import './App.css'
+import './components/Card/Card.tsx'
+import Card from "./components/Card/Card.tsx";
 
 function App() {
   return (
@@ -13,7 +15,6 @@ function App() {
                               </h2>
                           </div>
                           <button className="buttonStyled">MORE ABOUT ME</button>
-    
                       </div>
 
 
@@ -29,7 +30,7 @@ function App() {
               </div>
           </div>
           <div className="bg2">
-
+              <Card/>
           </div>
 
       </>

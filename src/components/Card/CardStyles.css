@@ -1,0 +1,66 @@
+    .vertical-card
+    {
+        display: flex;
+        flex-direction: column;
+        justify-items: start;
+        width: 430px;
+        height: 650px;
+        position: relative;
+    }
+
+    .first-part {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 85%;
+        background: #C4BAFF;
+        border: #C4BAFF solid 1px;
+        border-radius: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .first-part img {
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        display: block;
+        border: white solid 5px;
+        border-radius: 15px;
+        user-select: none;
+        transition: all 0.1s ease-out;
+    }
+
+    .first-part img:hover{
+        width: 92%;
+        height: 92%;
+        border: #e6e3ff solid 5px;
+
+    }
+
+    .second-part
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 15%;
+        background: rgba(25, 14, 41, 0.64);
+        border-radius: 15px;
+        position: absolute;
+        bottom: 5px;
+        text-align: center;
+        overflow: scroll;
+        z-index: 0;
+        box-shadow: rgba(0, 0, 0, 0.83) 0px 0px 15px;
+        transition: all 0.1s ease-out;
+    }
+
+    .second-part h3
+    {
+        font-family: Inter, system-ui;
+        padding-top: 5px;
+        margin: auto 0px auto 0px;
+        z-index: 1;
+    }
