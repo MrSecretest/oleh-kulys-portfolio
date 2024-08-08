@@ -1,19 +1,28 @@
-    import './CardStyles.css';
-    import placeholder from './CardMedia/placeholder.png'
-    function Card()
-    {
-        return(
-            <>
-                <div className="vertical-card">
-                    <div className="first-part">
-                        <img src={placeholder} alt={"123"}/>
-                    </div>
-                    <div className="second-part">
-                        <h3>I am studying Computer Science at Lviv Polytechnic National University</h3>
-                    </div>
-                </div>
-            </>
-        );
-    }
+import './CardStyles.css';
+import Additional from '../Cards/CardMedia/additional.png'
+interface CardProps {
+    className?: string,
+    onClick?: () => void,
+    image: string,
+    desc: string
+}
 
-    export default Card;
+function Card({className, onClick, image, desc}: CardProps) {
+
+    return (
+        <>
+            <div className={"vertical-card" + (className ? " " + className : "")}
+                 onClick={onClick}>
+                <div className="first-part">
+
+                    <img src={image} alt={"Image"}/>
+                </div>
+                <div className="second-part">
+                    <h3>{desc}</h3>
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default Card;

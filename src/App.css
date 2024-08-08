@@ -190,10 +190,13 @@
 
 .bg2{
     display: flex;
+    flex-direction: column;
+    gap:100px;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    min-height: 100vh;
+    padding-bottom: 150px;
+    min-height: fit-content;
     background-size: cover;
     background: linear-gradient(#802AC5 75%,#2A5780 100%);
 }

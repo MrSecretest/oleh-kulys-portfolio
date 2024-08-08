@@ -1,6 +1,6 @@
 import './App.css'
 import './components/Card/Card.tsx'
-import Card from "./components/Card/Card.tsx";
+import Cards from "./components/Cards/Cards.tsx";
 
 function App() {
   return (
@@ -30,7 +30,8 @@ function App() {
               </div>
           </div>
           <div className="bg2">
-              <Card/>
+              <h1>Briefly about myself</h1>
+              <Cards/>
           </div>
 
       </>
