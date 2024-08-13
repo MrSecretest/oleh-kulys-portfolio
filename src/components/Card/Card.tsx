@@ -1,5 +1,4 @@
 import './CardStyles.css';
-import Additional from '../Cards/CardMedia/additional.png'
 interface CardProps {
     className?: string,
     onClick?: () => void,

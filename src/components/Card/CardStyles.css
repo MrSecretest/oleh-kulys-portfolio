@@ -86,7 +86,7 @@
     overflow: scroll;
     z-index: 0;
     box-shadow: rgba(0, 0, 0, 0.83) 0px 0px 15px;
-    transition: all 0.1s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 .second-part h3
@@ -101,3 +101,4 @@
 {
     display: flex;
 }
+
