@@ -1,82 +1,42 @@
-#root {
-    font-family: Inter, system-ui;
-}
-
 .image-text-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     position: relative;
-    width: 95%;
-    overflow-x: clip;
+    width: 100%;
+    overflow: hidden;
 }
 
 .image-wrapper {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
 .image-text-slide {
-    flex: 0 0 100%;
-    padding: 5px 0px 5px 0px;
-    max-width: 100%;
-    text-align: center;
-}
-
-.image-text-slide p
-{
-    font-weight: bold;
-}
-
-.image-text-slide img, video {
-    width: 65%;
-    border-radius: 15px;
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
     padding: 10px;
-    cursor: pointer;
-    z-index: 1;
+    box-sizing: border-box;
+}
+.image-text-slide img:hover, .image-text-slide video:hover {
+    transform: scale(1.1); /* Adjust the scale value as needed */
 }
 
-.carousel-button.left {
-    left: 10px;
-}
-
-.carousel-button.right {
-    right: 10px;
-}
-
-.carousel-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.border{
-    position: relative;
+.image-text-slide img, .image-text-slide video {
+    z-index: 5; /* Ensure the enlarged item appears on top */
+    max-width: 100%;
+    height: auto;
     border-radius: 15px;
-    border: 3px solid #82abcf;
-    transition: all 0.1s ease-in;
-}
-
-.border:hover{
-    border: 3px solid #b06af7;
-    box-shadow: 0 0 10px #b06af7;
+    transition: transform 0.2s ease; /* Transition the transform property */
 }
 
 
 @media (orientation: portrait) {
-    .image-text-slide img, video {
-        width: 85vw;
-        min-height: 50vw;
-    }
-    .carousel-button
-    {
-        scale: 0.7;
-        opacity: 50%;
+    .image-text-slide {
+        width: 95%;
     }
 }

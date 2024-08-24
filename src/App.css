@@ -1,6 +1,7 @@
 #root {
     font-family: Inter, system-ui;
     background: #7D29C4;
+    color: white;
 }
 
 .buttonStyled {
@@ -117,7 +118,7 @@
 @keyframes repeatAnim {
     0%{
         scale: 1.52;
-        opacity: 0.3;
+        opacity: 0.15;
     }
     50%{
         scale: 1.5;
@@ -125,7 +126,7 @@
     }
     100%{
         scale: 1.52;
-        opacity: 0.3;
+        opacity: 0.15;
     }
 }
 
@@ -368,6 +369,16 @@
 }
 
 @media (orientation: portrait) {
+    .bg1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0%;
+        rotate: -45deg;
+        scale: 1.5;
+        width: 200%;
+        height: 125%;
+    }
     .bg1-leftContainer
     {
         display: flex;
@@ -402,6 +413,11 @@
         width: 100%;
         text-wrap: wrap;
         margin: 0px;
+        box-shadow: rgba(26, 26, 26, 0.57) 0px 0px 5px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.3);
+        padding: 5px;
     }
 
     .bg1-myPicture

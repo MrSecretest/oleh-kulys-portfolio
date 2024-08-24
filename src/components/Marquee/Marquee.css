@@ -20,15 +20,15 @@
 .Marquee {
     display: flex;
     flex-direction: column;
-    padding: 5px 0px 5px 0px;
+    padding: 5px 0px 0px 0px;
     justify-content: center;
     align-items: center;
     width: 100px;
     height: 100px;
     position: absolute;
-    left: max(calc(200px * 9), 100%);
+    left: max(calc(25px * 9), 100%);
     animation-name: scrollLeft;
-    animation-duration: 15s;
+    animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-delay: calc((var(--i) * 3.3333333s) - 15s);
