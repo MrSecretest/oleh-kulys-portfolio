@@ -8,12 +8,11 @@
     position: relative;
     transition: all 150ms ease-out;
     z-index: 1;
-
 }
 .vertical-card.deactivated
 {
     opacity: 0.2;
-    scale: 0.85;
+    scale: 0.75;
     z-index: 0;
 }
 
@@ -108,5 +107,45 @@
     padding: 25px;
     backdrop-filter: blur(7px);
     box-shadow: rgba(0, 0, 0, 0.18) 0px 0px 35px;
+    overflow: clip;
 }
 
+@media (orientation: portrait) {
+
+    .vertical-card
+    {
+        width: 200px;
+        height: 350px;
+    }
+
+    .first-part {
+        height: 65%;
+        border-radius: 10px;
+    }
+    .second-part
+    {
+        height: 35%;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.46) 0px 0px 15px;
+
+    }
+
+    .vertical-card.deactivated.left
+    {
+        transform: translateX(0px);
+    }
+    .vertical-card.deactivated.right
+    {
+        transform: translateX(0px);
+    }
+    .vertical-card.main.left {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(55%);
+    }
+    .vertical-card.main.right {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(-55%);
+    }
+}

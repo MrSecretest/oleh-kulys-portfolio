@@ -25,7 +25,6 @@ function App() {
   return (
       <>
           <ContactMeMenu/>
-
           <div className="bg1" id="bg1">
               <div className="verticalContainer">
                   <div className="bg1-container">
@@ -57,6 +56,7 @@ function App() {
                       <ButtonSquare rotationIndex={0} onClick={ScrollToElement('bg3')}/>
                   </div>
               </div>
+
           </div>
           <div className="bg3" id="bg3">
               <div className="popupRow">

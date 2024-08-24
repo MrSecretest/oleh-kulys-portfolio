@@ -48,6 +48,14 @@
     border: 4px solid #b06af7;
 }
 
+.popupRow
+{
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+
 @keyframes rotationImage {
     0%{
         transform: rotate(0deg);
@@ -105,6 +113,7 @@
     animation: repeatAnim infinite 3s;
 }
 
+
 @keyframes repeatAnim {
     0%{
         scale: 1.52;
@@ -123,9 +132,7 @@
 .verticalContainer {
     display: flex;
     flex-direction: column;
-    height: auto;
     align-items: center;
-    position: relative;
 }
 
 .verticalContainer h1{
@@ -140,16 +147,19 @@
     height: fit-content;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    min-width: 1500px;
     padding: 0px 50px 0px 133px;
     margin-top: 100px;
 }
-
-
 .bg1-container h1{
     font-size: 8rem;
-    margin: 0;
+    margin-right: 50px;
 }
+
+
+
+
+
 .underline
 {
     position: relative;
@@ -192,7 +202,7 @@
 }
 .bg1-myPicture img
 {
-    width: 750px    ;
+    width: 750px;
 }
 
 .bg1-myPicture:hover{
@@ -227,10 +237,8 @@
     display: flex;
     flex-direction: column;
     gap:100px;
-
     width: 100vw;
     min-height: fit-content;
-    height: 105vh;
     background-size: cover;
     background: linear-gradient(rgba(128, 42, 197, 0.79) 75%, #51328a 100%);
     overflow: clip;
@@ -294,7 +302,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 125vh;
+    min-height: 125vh;
     padding-bottom: 150px;
     min-height: fit-content;
     background-size: cover;
@@ -343,7 +351,6 @@
     box-shadow: 0 0 10px #b06af7;
     scale: 105%;
     backdrop-filter: blur(15px);
-
 }
 
 .descInfo
@@ -358,4 +365,75 @@
     font-size: large;
     font-weight: 520;
     width: fit-content;
+}
+
+@media (orientation: portrait) {
+    .bg1-leftContainer
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .verticalContainer
+    {
+        display: flex;
+        width: 100%;
+    }
+
+    .verticalContainer h1
+    {
+        font-size: 2.5rem;
+        width: 100%;
+        text-align: center;
+    }
+    .bg1-container
+    {
+        flex-direction: column;
+        width: inherit;
+        align-items: center;
+        justify-content: center;
+
+        min-width: 300px;
+        padding: 0px;
+        margin-top: 50px;
+    }
+    .bg1-container h1{
+        font-size: 2.5rem;
+        width: 100%;
+        text-wrap: wrap;
+        margin: 0px;
+    }
+
+    .bg1-myPicture
+    {
+        margin: 50px 0px 50px 0px;
+
+    }
+
+    .bg1-myPicture img
+    {
+        width: 350px;
+    }
+
+    .popupRow
+    {
+        font-size: 0.8rem;
+    }
+
+    .infoContainer
+    {
+        width: 90%;
+    }
+    .infoContainer p{
+        font-size: 1rem;
+    }
+
+    .infoContainer:hover
+    {
+        border: 3px solid #b06af7;
+        box-shadow: 0 0 10px #b06af7;
+        scale: 105%;
+        backdrop-filter: blur(15px);
+    }
+
 }

@@ -4,11 +4,11 @@
 
 .image-text-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     position: relative;
-    width: 80%;
-    overflow: hidden;
+    width: 95%;
+    overflow-x: clip;
 }
 
 .image-wrapper {
@@ -30,13 +30,9 @@
 }
 
 .image-text-slide img, video {
-    width: auto;
-    max-height: 750px;
-    height: auto;
+    width: 65%;
     border-radius: 15px;
 }
-
-
 
 .carousel-button {
     position: absolute;
@@ -73,3 +69,14 @@
 }
 
 
+@media (orientation: portrait) {
+    .image-text-slide img, video {
+        width: 85vw;
+        min-height: 50vw;
+    }
+    .carousel-button
+    {
+        scale: 0.7;
+        opacity: 50%;
+    }
+}
