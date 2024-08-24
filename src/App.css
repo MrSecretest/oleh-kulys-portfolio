@@ -123,15 +123,15 @@
 .verticalContainer {
     display: flex;
     flex-direction: column;
-    height: fit-content;
+    height: auto;
     align-items: center;
     position: relative;
 }
 
-.verticalContainer > :first-child {
-    margin-top: auto;
-    margin-bottom: auto;
+.verticalContainer h1{
+    margin: 50px 0px 50px 0px;
 }
+
 
 
 .bg1-container {
@@ -227,8 +227,7 @@
     display: flex;
     flex-direction: column;
     gap:100px;
-    justify-content: center;
-    align-items: center;
+
     width: 100vw;
     min-height: fit-content;
     height: 105vh;
@@ -251,6 +250,7 @@
     animation: repeatAnim infinite 3s;
 
 }
+
 
 .bg3
 {
