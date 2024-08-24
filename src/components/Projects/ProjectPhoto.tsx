@@ -6,6 +6,7 @@ import project2 from '../Projects/ProjectsMedia/project2.webm';
 import project2Preview from '../Projects/ProjectsMedia/project2.png';
 import project3 from '../Projects/ProjectsMedia/project3.png';
 import ButtonSquare from "../Buttons/ButtonSquare.tsx";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 const projects = [
     { src: project1, alt: 'Project 1', description: 'First Figma design ever', type: 'img'},
@@ -37,7 +38,7 @@ function ProjectPhoto() {
 
                     <div key={index} className="image-text-slide">
                         {project.type === 'img'? (
-                            <img className="border" src={project.src} alt={project.alt} />
+                            <LazyLoadImage placeholderSrc={project.src} effect={"blur"} className="border" src={project.src} alt={project.alt} />
                             ):
                             (
                             <video className="border" src={project.src} autoPlay loop muted poster={project2Preview}>

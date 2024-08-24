@@ -14,7 +14,7 @@ function Card({className, onClick, image, desc}: CardProps) {
                  onClick={onClick}>
                 <div className="first-part">
 
-                    <img src={image} alt={"Image"}/>
+                    <img  src={image} alt={""}/>
                 </div>
                 <div className="second-part">
                     <h3>{desc}</h3>

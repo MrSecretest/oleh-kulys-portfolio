@@ -8,29 +8,29 @@ import JSImage from './MarqueeMedia/JS.png'
 import MUIImage from './MarqueeMedia/MUI.png'
 import ReactImage from './MarqueeMedia/React.png'
 import TSImage from './MarqueeMedia/TS.png'
-//import {LazyLoadImage} from "react-lazy-load-image-component";
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 export default function Marquee() {
     return(
         <div className="MarqueeContainer">
             <div className="Marquee">
-                <img src={BootstrapImage}></img></div>
+                <LazyLoadImage placeholderSrc={CssImage} effect={"blur"} src={CssImage}></LazyLoadImage></div>
             <div className="Marquee">
-                <img src={CssImage}></img></div>
+                <LazyLoadImage placeholderSrc ={BootstrapImage} src={BootstrapImage}></LazyLoadImage></div>
             <div className="Marquee">
-                <img src={FigmaImage}></img></div>
+                <LazyLoadImage placeholderSrc={FigmaImage} src={FigmaImage}></LazyLoadImage></div>
             <div className="Marquee">
-                <img src={GitHubImage}></img></div>
+                <LazyLoadImage placeholderSrc={GitHubImage} src={GitHubImage}></LazyLoadImage></div>
             <div className="Marquee">
-                <img src={HtmlImage}></img></div>
+                <LazyLoadImage placeholderSrc={HtmlImage} src={HtmlImage}></LazyLoadImage></div>
             <div className="Marquee">
-                <img src={JSImage}></img></div>
+                <LazyLoadImage placeholderSrc={JSImage} src={JSImage}></LazyLoadImage></div>
             <div className="Marquee">
-                <img src={MUIImage}></img></div>
+                <LazyLoadImage placeholderSrc={MUIImage} src={MUIImage}></LazyLoadImage></div>
             <div className="Marquee">
-                <img src={ReactImage}></img></div>
+                <LazyLoadImage placeholderSrc={ReactImage} src={ReactImage}></LazyLoadImage></div>
             <div className="Marquee">
-                <img src={TSImage}></img></div>
+                <LazyLoadImage placeholderSrc={TSImage} src={TSImage}></LazyLoadImage></div>
         </div>
     );
 }

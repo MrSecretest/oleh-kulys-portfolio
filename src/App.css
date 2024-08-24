@@ -1,5 +1,6 @@
 #root {
     font-family: Inter, system-ui;
+    background: #7D29C4;
 }
 
 .buttonStyled {
@@ -83,10 +84,41 @@
     width: 100vw;
     min-height: 100vh;
     background-size: cover;
-    background: linear-gradient(#552BCC 75%,#802AC5 100%);
+    background: linear-gradient(rgba(85, 43, 204, 0.62) 45%, rgb(128, 42, 197) 100%);
+    overflow: clip;
+    position: relative;
+    z-index: 1;
 }
 
+.bg1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 45%;
+    rotate: -45deg;
+    scale: 1.5;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='80' patternTransform='scale(3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(266, 20%, 55%, 0)'/><path d='M-4.798 13.573C-3.149 12.533-1.446 11.306 0 10c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='5' stroke='hsla(264,56.8%,27.3%,1)' fill='none'/><path d='M-4.798 33.573C-3.149 32.533-1.446 31.306 0 30c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='5' stroke='hsla(273,40.2%,22.9%,1)' fill='none'/><path d='M-4.798 53.573C-3.149 52.533-1.446 51.306 0 50c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='5' stroke='hsla(285,100%,12.2%,1)' fill='none'/><path d='M-4.798 73.573C-3.149 72.533-1.446 71.306 0 70c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='5' stroke='hsla(263,42.9%,90.4%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    z-index: 0;
+    opacity: 0.3;
+    animation: repeatAnim infinite 3s;
+}
 
+@keyframes repeatAnim {
+    0%{
+        scale: 1.52;
+        opacity: 0.3;
+    }
+    50%{
+        scale: 1.5;
+        opacity: 0.5;
+    }
+    100%{
+        scale: 1.52;
+        opacity: 0.3;
+    }
+}
 
 .verticalContainer {
     display: flex;
@@ -102,7 +134,8 @@
 }
 
 
-.bg1-container{
+.bg1-container {
+    position: relative;
     display: flex;
     height: fit-content;
     align-items: center;
@@ -111,6 +144,7 @@
     padding: 0px 50px 0px 133px;
     margin-top: 100px;
 }
+
 
 .bg1-container h1{
     font-size: 8rem;
@@ -193,14 +227,29 @@
     display: flex;
     flex-direction: column;
     gap:100px;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     width: 100vw;
-    padding-bottom: 150px;
     min-height: fit-content;
-    height: 115vh;
+    height: 105vh;
     background-size: cover;
-    background: linear-gradient(#802AC5 75%,#2A5780 100%);
+    background: linear-gradient(rgba(128, 42, 197, 0.79) 75%, #51328a 100%);
+    overflow: clip;
+    position: relative;
+}
+
+.bg2::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    scale: 2;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='70' height='8' patternTransform='scale(2) rotate(125)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(272, 63%, 46%, 0)'/><path d='M-.02 22c8.373 0 11.938-4.695 16.32-9.662C20.785 7.258 25.728 2 35 2c9.272 0 14.215 5.258 18.7 10.338C58.082 17.305 61.647 22 70.02 22M-.02 14.002C8.353 14 11.918 9.306 16.3 4.339 20.785-.742 25.728-6 35-6 44.272-6 49.215-.742 53.7 4.339c4.382 4.967 7.947 9.661 16.32 9.664M70 6.004c-8.373-.001-11.918-4.698-16.3-9.665C49.215-8.742 44.272-14 35-14c-9.272 0-14.215 5.258-18.7 10.339C11.918 1.306 8.353 6-.02 6.002'  stroke-width='2' stroke='hsla(271, 0%, 66%, 0.09)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    animation: repeatAnim infinite 3s;
+
 }
 
 .bg3
@@ -212,7 +261,101 @@
     align-items: center;
     width: 100vw;
     padding-bottom: 150px;
+    min-height: 75vh;
+    background-size: cover;
+    background: linear-gradient(#51328a 45%, #251633 100%);
+    overflow: clip;
+    position: relative;
+
+}
+
+.bg3::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    rotate: 180deg;
+    scale: 2;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='70' height='8' patternTransform='scale(2) rotate(125)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(272, 63%, 46%, 0)'/><path d='M-.02 22c8.373 0 11.938-4.695 16.32-9.662C20.785 7.258 25.728 2 35 2c9.272 0 14.215 5.258 18.7 10.338C58.082 17.305 61.647 22 70.02 22M-.02 14.002C8.353 14 11.918 9.306 16.3 4.339 20.785-.742 25.728-6 35-6 44.272-6 49.215-.742 53.7 4.339c4.382 4.967 7.947 9.661 16.32 9.664M70 6.004c-8.373-.001-11.918-4.698-16.3-9.665C49.215-8.742 44.272-14 35-14c-9.272 0-14.215 5.258-18.7 10.339C11.918 1.306 8.353 6-.02 6.002'  stroke-width='2' stroke='hsla(271, 0%, 66%, 0.09)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    pointer-events: none;
+    animation: repeatAnim infinite 3s;
+
+}
+
+.bg4
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap:25px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 125vh;
+    padding-bottom: 150px;
     min-height: fit-content;
     background-size: cover;
-    background: linear-gradient(#2A5780 75%,#802AC5 100%);
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='86.602' height='50' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 17%, 1)'/><path d='M-.15 6.75 21.5-5.75M-.15.238l21.65-12.5M0 6.75l-21.65-12.5M0 .238l-21.65-12.5M0 12.5v-25L21.65-25M0 12.5-21.65 0v-25L0-37.5 21.65-25V0zm86.452 44.25 21.65-12.5m-21.65 5.988 21.65-12.5m-21.65 5.988 21.65-12.5m-21.5 25.524-21.65-12.5m21.65 5.988-21.65-12.5m21.65 5.988-21.65-12.5m21.65 6.274L64.952 25m21.65 37.5v-25l21.65-12.5m-43.3 25V25l21.65-12.5 21.65 12.5v25l-21.65 12.5Zm21.5-43.25 21.65-12.5M86.452.238l21.65-12.5M86.602 6.75l-21.65-12.5M86.601.238l-21.65-12.5M86.601 12.5v-25l21.65-12.5m-21.65 37.5L64.952 0v-25l21.65-12.5 21.65 12.5V0zM43.15 31.75l21.651-12.5m-21.65 5.988 21.65-12.5m-21.65 5.988 21.65-12.5m-21.5 25.524-21.65-12.5m21.65 5.988-21.65-12.5m21.65 5.988-21.65-12.5M43.3 12.5 21.651 0M43.3 37.5v-25L64.951 0m0 25-21.65 12.5L21.651 25V0L43.3-12.5 64.951 0zm-21.65 37.5L21.651 50M43.3 87.5v-25L64.951 50m0 0v25l-21.65 12.5L21.651 75V50L43.3 37.5ZM-.15 56.75 21.5 44.25M-.15 50.238l21.65-12.5M-.15 43.726l21.65-12.5M0 56.75l-21.65-12.5M0 50.238l-21.65-12.5M0 43.726l-21.65-12.5M0 37.5-21.65 25M0 62.5v-25L21.65 25m0 0v25L0 62.5-21.65 50V25L0 12.5z'  stroke-linecap='square' stroke-width='1' stroke='hsla(259, 44%, 53%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");    backdrop-filter: blur(10px);
+}
+
+.bg4 > *
+{
+    z-index: 2;
+}
+
+.bg4::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(to bottom, #251633 1%, rgba(24, 3, 44, 0.58) 45%, #000000 100%);
+}
+.infoRow
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.infoContainer
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 440px;
+    border-radius: 15px;
+    margin-bottom: 55px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.infoContainer:hover
+{
+    border: 3px solid #b06af7;
+    box-shadow: 0 0 10px #b06af7;
+    scale: 105%;
+    backdrop-filter: blur(15px);
+
+}
+
+.descInfo
+{
+    width: 100%;
+    background: linear-gradient(rgba(7, 38, 17, 0.61), rgba(13, 9, 60, 0.76));
+    padding: 15px;
+    border-radius: 15px;
+}
+.descInfo p{
+    text-align: start;
+    font-size: large;
+    font-weight: 520;
+    width: fit-content;
 }

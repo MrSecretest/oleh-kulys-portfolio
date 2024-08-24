@@ -6,8 +6,6 @@ interface ButtonProps
     onClick?: () => void
 }
 function Button({desc, onClick}: ButtonProps) {
-
-
     return (
         <button className="buttonStyled" onClick={onClick}>{desc}</button>
     );

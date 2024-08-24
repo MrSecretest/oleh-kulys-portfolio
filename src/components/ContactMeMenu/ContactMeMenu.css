@@ -1,0 +1,75 @@
+.menuDiv{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    width: 100%;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 0px 10px 0px;
+    transition: all 0.1s ease-in-out;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px 15px 0px 0px;
+    backdrop-filter: blur(15px);
+}
+
+.menuDiv.inactive
+{
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0px;
+}
+.menuDiv:hover{
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0px 10px 0px;
+}
+
+.menuDiv:hover .menuBar {
+    scale: 1;
+    opacity: 1;
+}
+
+
+.menuBar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 55px;
+    background: #e6e6e6;
+    border: 3px solid #7681ff;
+    border-radius: 50px;
+    box-shadow: 0 0 25px #7681ff;
+    z-index: 99;
+    transition: all 0.1s ease;
+
+}
+
+.menuBar.inactive {
+    margin: 0px;
+    opacity: 0.8;
+    scale: 0.8;
+}
+
+.menuBar:hover
+{
+    scale: 1;
+    opacity: 1;
+}
+.menuItem
+{
+    height: 64px;
+    width: 64px;
+    scale: 0.7;
+    transition: all 0.1s ease;
+    border-radius: 100%;
+}
+
+.menuItem:hover
+{
+    scale: 0.8;
+    box-shadow: 0 0px 20px #180f1c;
+}
