@@ -43,7 +43,10 @@ function App() {
                       </div>
                   </div>
                   <div className="downButtonContainer">
+                      <p>Briefly about myself</p>
                       <ButtonSquare rotationIndex={0} onClick={ScrollToElement('bg2')}/>
+                      <p>Briefly about myself</p>
+
                   </div>
               </div>
           </div>
@@ -53,7 +56,9 @@ function App() {
                   <h1>Briefly about myself</h1>
                   <Cards/>
                   <div className="downButtonContainer">
+                      <p>More about me</p>
                       <ButtonSquare rotationIndex={0} onClick={ScrollToElement('bg3')}/>
+                      <p>More about me</p>
                   </div>
               </div>
 
@@ -64,12 +69,41 @@ function App() {
               </div>
               <div className="infoContainer">
                   <div className="descInfo">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis delectus dicta dolorum esse fugiat fugit ipsum natus nihil non obcaecati officia placeat possimus quis rem sequi tenetur, voluptas voluptatum.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus excepturi nihil non? Accusamus, consequuntur debitis dolores ducimus explicabo fuga fugit illo impedit laudantium nihil perferendis repellendus sint? Officiis, omnis?.</p>
-                      <p className="underline" style={{width:"100%", textAlign:"center"}}>Let's connect and create something amazing together!</p>
+                      <p style={{fontWeight: "normal"}}>Hi, I'm <span style={{fontWeight: "bold"}}>Oleh</span>, a
+                          passionate frontend developer currently studying <span style={{fontWeight: "bold"}}>Computer Science</span>.
+                          I have a
+                          strong interest in creating <span style={{fontWeight: "bold"}}>dynamic</span> and <span
+                              style={{fontWeight: "bold"}}>user-friendly web applications</span>.
+                      </p>
+                      <p style={{fontWeight: "normal"}}>My background spans various programming languages and
+                          technologies, including <span style={{fontWeight: "bold"}}>Python, C, C++,
+                          Java, HTML, CSS, JavaScript, and React</span>. I’m eager to leverage this diverse skill set to
+                          build
+                          innovative and impactful solutions. </p>
+                      <p style={{fontWeight: "normal"}}>
+                          My main objective is to create <span style={{fontWeight: "bold"}}>intuitive</span> and <span
+                          style={{fontWeight: "bold"}}>aesthetically pleasing</span> designs using React and other
+                          technologies.
+                          My <span style={{fontWeight: "bold"}}>creativity</span> is <span
+                          style={{fontWeight: "bold"}}>diverse</span>, and I always enjoy making engaging designs that
+                          balance functionality with visual appeal.
+                      </p>
+                      <p style={{fontWeight: "normal"}} className="underline">I’m excited about the future and look
+                          forward
+                          to exploring new opportunities and challenges,
+                          feel free to connect with me to discuss projects or opportunities!</p>
+                      <div style={{display:"flex", justifyContent:"space-evenly"}}>
+                          <a style={{color:"yellow", textDecoration:"underline"}} href="mailto:kulys.olezik@gmail.com" target="_blank" rel="noopener noreferrer">Email me</a>
+                          <a style={{color:"yellow", textDecoration:"underline"}} href="mailto:kulys.olezik@gmail.com" target="_blank" rel="noopener noreferrer">CV</a>
+                      </div>
+
                   </div>
               </div>
-              <ButtonSquare rotationIndex={0} onClick={ScrollToElement('bg4')}/>
+              <div className="downButtonContainer">
+                  <p>My projects</p>
+                  <ButtonSquare rotationIndex={0} onClick={ScrollToElement('bg4')}/>
+                  <p>My projects</p>
+              </div>
 
           </div>
 
@@ -79,7 +113,11 @@ function App() {
               <ProjectPhoto/>
               <h2>Technologies I use:</h2>
               <Marquee/>
-              <ButtonSquare rotationIndex={2} onClick={ScrollToElement('bg1')}/>
+              <div className="downButtonContainer">
+                  <p>Back to start</p>
+                  <ButtonSquare rotationIndex={2} onClick={ScrollToElement('bg1')}/>
+                  <p>Back to start</p>
+              </div>
 
           </div>
 

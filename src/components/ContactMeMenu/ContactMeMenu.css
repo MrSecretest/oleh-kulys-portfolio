@@ -37,8 +37,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 400px;
-    height: 55px;
+    width: 300px;
+    height: 45px;
     background: #e6e6e6;
     border: 3px solid #7681ff;
     border-radius: 50px;
@@ -51,7 +51,7 @@
 .menuBar.inactive {
     margin: 0px;
     opacity: 0.8;
-    scale: 0.8;
+    scale: 0.7;
 }
 
 .menuBar:hover
@@ -61,8 +61,8 @@
 }
 .menuItem
 {
-    height: 64px;
-    width: 64px;
+    height: 48px;
+    width: 48px;
     scale: 0.7;
     transition: all 0.1s ease;
     border-radius: 100%;
@@ -72,4 +72,9 @@
 {
     scale: 0.8;
     box-shadow: 0 0px 20px #180f1c;
+}
+
+.menuItem:active
+{
+    scale: 1;
 }

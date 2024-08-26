@@ -79,12 +79,22 @@
 .downButtonContainer
 {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
+    gap: 15px;
     margin-top: auto;
     margin-bottom: 100px;
+    text-decoration: underline;
+    font-family: Inter, system-ui;
+    font-weight: normal;
+    font-style: italic;
+    text-wrap: stable;
+    z-index: 5;
 }
+
+
 
 .bg1{
     display: flex;
@@ -148,7 +158,7 @@
     height: fit-content;
     align-items: center;
     justify-content: space-around;
-    min-width: 1500px;
+    min-width: 750px;
     padding: 0px 50px 0px 133px;
     margin-top: 100px;
 }
@@ -203,7 +213,7 @@
 }
 .bg1-myPicture img
 {
-    width: 750px;
+    width: 650px;
 }
 
 .bg1-myPicture:hover{
@@ -343,21 +353,22 @@
     border-radius: 15px;
     margin-bottom: 55px;
     backdrop-filter: blur(5px);
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
+    scale: 1;
 }
 
 .infoContainer:hover
 {
     border: 3px solid #b06af7;
     box-shadow: 0 0 10px #b06af7;
-    scale: 105%;
+    scale: 1.15;
     backdrop-filter: blur(15px);
 }
 
 .descInfo
 {
     width: 100%;
-    background: linear-gradient(rgba(7, 38, 17, 0.61), rgba(13, 9, 60, 0.76));
+    background: linear-gradient(rgba(51, 33, 85, 0.61), rgba(13, 9, 60, 0.76));
     padding: 15px;
     border-radius: 15px;
 }
@@ -366,6 +377,49 @@
     font-size: large;
     font-weight: 520;
     width: fit-content;
+}
+
+@media (max-width: 1500px) {
+    .bg1-container
+    {
+        width: 1000px;
+    }
+    .verticalContainer
+    {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .bg1-leftContainer h1{
+        font-size: 5rem;
+    }
+    .bg1-leftContainer h2
+    {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .bg1-myPicture img
+    {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .bg1-container
+    {
+        width: 750px;
+    }
+    .bg1-myPicture img
+    {
+        width: 250px;
+    }
+    .downButtonContainer
+    {
+        font-size: 0.7rem;
+    }
 }
 
 @media (orientation: portrait) {
@@ -451,5 +505,10 @@
         scale: 105%;
         backdrop-filter: blur(15px);
     }
-
+    .bg4 h1
+    {
+        font-size: 2.5rem;
+        text-align: center;
+    }
 }
+

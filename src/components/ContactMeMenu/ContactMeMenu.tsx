@@ -7,8 +7,7 @@ import cvIcon from './ContactMeMedia/cv.png';
 import emailIcon from './ContactMeMedia/email.png';
 
 export default function ContactMeMenu() {
-    const [isActive, setIsActive] = useState(true); // State to track if menu is active
-
+    const [isActive, setIsActive] = useState(true);
     useEffect(() => {
         const handleScroll = () => {
             if ((window.scrollY > 1)) {
@@ -29,11 +28,21 @@ export default function ContactMeMenu() {
         <>
             <div className={`menuDiv ${isActive ? '' : 'inactive'}`}>
                 <div className={`menuBar ${isActive ? '' : 'inactive'}`}>
-                    <img src={telegramIcon} className="menuItem" alt="Telegram"/>
-                    <img src={linkedinIcon} className="menuItem" alt="LinkedIn"/>
-                    <img src={cvIcon} className="menuItem" alt="CV"/>
-                    <img src={githubIcon} className="menuItem" alt="GitHub"/>
-                    <img src={emailIcon} className="menuItem" alt="Email"/>
+                    <a target="_blank" rel="noopener noreferrer" href={"https://t.me/sonechko_sonechko"}>
+                        <img src={telegramIcon} className="menuItem" alt="Telegram"/>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href={"https://www.linkedin.com/in/oleh-kulys-a0b095274/"}>
+                        <img src={linkedinIcon} className="menuItem" alt="LinkedIn"/>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" >
+                        <img  src={cvIcon} className="menuItem" alt="CV"/>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrSecretest"}>
+                        <img src={githubIcon} className="menuItem" alt="GitHub"/>
+                    </a>
+                    <a href="mailto:kulys.olezik@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <img src={emailIcon} className="menuItem" alt="Email"/>
+                    </a>
                 </div>
             </div>
 

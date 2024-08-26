@@ -23,7 +23,7 @@ function ProjectPhoto() {
                             <img className="border" src={project.src} alt={project.alt} />
                             ):
                             (
-                            <video className="border" src={project.src} autoPlay loop muted >
+                            <video className="border" src={project.src} controls={true} autoPlay loop muted >
                                 Your browser does not support this video.
                             </video>
                                         )

@@ -4,7 +4,6 @@
     align-items: center;
     position: relative;
     width: 100%;
-    overflow: hidden;
 }
 
 .image-wrapper {
@@ -12,6 +11,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    overflow: visible;
 }
 
 .image-text-slide {
@@ -24,6 +24,8 @@
 }
 .image-text-slide img:hover, .image-text-slide video:hover {
     transform: scale(1.1); /* Adjust the scale value as needed */
+    border: 3px solid #b06af7;
+    box-shadow: 0 0 10px #b06af7;
 }
 
 .image-text-slide img, .image-text-slide video {
@@ -32,6 +34,7 @@
     height: auto;
     border-radius: 15px;
     transition: transform 0.2s ease; /* Transition the transform property */
+    box-shadow: 0 0 30px rgba(16, 16, 16, 0.6);
 }
 
 
